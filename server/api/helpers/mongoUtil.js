@@ -1,6 +1,6 @@
 'use strict';
 
-exports.cleanUpData = function(model) {
+exports.cleanUpData = function (model) {
   var data = JSON.parse(JSON.stringify(model));
   if (data.hasOwnProperty('_id')) {
     delete data._id;
