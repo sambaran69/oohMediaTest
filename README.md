@@ -3,7 +3,7 @@ Protected API route built using Open API (Swagger) and JWT (Json Web Tokens)
 
 ## How to run this
 
-1) Start the server by running `npm start`
+1) Start the server by running `npm start` (It will try to connect to the MongoDb specified in config so ensure that its running!)
 
 2) Check the swagger-ui on `http://localhost:3000/docs`
 
