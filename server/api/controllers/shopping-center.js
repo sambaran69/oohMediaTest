@@ -1,4 +1,5 @@
 var shoppingCenter = require('../schemas/shoppingCenter');
+var mongoUtil = require('../helpers/mongoUtil');
 
 exports.fetchCenters = function (args, res, next) {
   res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -9,14 +10,16 @@ exports.fetchCenters = function (args, res, next) {
 
 exports.createCenter = function (args, res, next) {
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  return new shoppingCenter.ShoppingCenter(args.body).save().then((result) => {
+  var data = mongoUtil.cleanUpData(args.body);
+  return new shoppingCenter.ShoppingCenter(data).save().then((result) => {
     return res.end(JSON.stringify(result));
   });
 };
 
 exports.updateCenter = function (args, res, next) {
   var centerId = args.swagger.params.centerId.value;
-  return shoppingCenter.ShoppingCenter.findByIdAndUpdate(centerId, { $set: args.body }, { new: true }, (err, result) => {
+  var data = mongoUtil.cleanUpData(args.body);
+  return shoppingCenter.ShoppingCenter.findByIdAndUpdate(centerId, { $set: data }, { new: true }, (err, result) => {
     if (err) {
       res.writeHead(500, { 'Content-Type': 'application/json' });
       return res.end(JSON.stringify({ message: 'Id Not found for Shopping Center' }));
