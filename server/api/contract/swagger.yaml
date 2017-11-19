@@ -218,7 +218,7 @@ paths:
         - Bearer: []
       x-security-scopes:
         - admin
-        - users
+        - user
       parameters:
         - in: path
           name: assetId
@@ -298,7 +298,7 @@ definitions:
     type: array
     items:
       $ref: "#/definitions/Asset"
-    description: the array of shopping center objects returned
+    description: the array of asset objects returned
   Asset:
     type: object
     required:
