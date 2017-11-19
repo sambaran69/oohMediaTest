@@ -19,10 +19,10 @@ Protected API route built using Open API (Swagger) and JWT (Json Web Tokens)
 }
 ``
  and take the token that you get in the response and click on the `Authorize` button on the UI
- and paste it AFTER `Bearer `.
+ and paste it AFTER the text `Bearer `.
 
 6) Alternatively you can call any API again with the following header
-``Authorization: Bearer _TOKEN_``, replacing `_TOKEN_ ` with the value you got from request #4
+``Authorization: Bearer _TOKEN_``, replacing `_TOKEN_ ` with the value you got from request #5
 
 7) There are two roles: `admin` and `user`. Only Admin can create, modify and delete shopping centers.
 Try logging in as an admin and accessing the admin-only route.
