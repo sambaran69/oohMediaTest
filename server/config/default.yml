@@ -1,0 +1,3 @@
+mongoDbConnectUrl: "mongodb://localhost:27017/ooh-media-db"
+api:
+  listenPort: 3000

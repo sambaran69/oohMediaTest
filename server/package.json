@@ -1,0 +1,31 @@
+{
+  "name": "ooh-media-test-api",
+  "version": "1.0.0",
+  "description": "API for Ooh Media Test Project",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint --ignore-path ../.gitignore .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sambaran Roy",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "config": "^1.28.1",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.4",
+    "swagger-tools": "^0.10.3",
+    "validator": "^9.1.1",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-strongloop": "^2.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
